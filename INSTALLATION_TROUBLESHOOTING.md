@@ -1,21 +1,49 @@
 # 🛠️ Installation Troubleshooting
 
-## Problem: PyTorch Version Conflicts
+## ❌ Problem: Visual C++ Redistributable fehlt
 
-Falls du den Fehler "torch 2.0.1 keine version satisfied" erhältst, verwende eine der folgenden Lösungen:
+**Fehlermeldung:**
+```
+Microsoft Visual C++ Redistributable is not installed.
+It can be downloaded at https://aka.ms/vs/16/release/vc_redist.x64.exe
+```
 
-### 🚀 Lösung 1: Verbesserte Setup-Datei (Empfohlen)
+### 🚀 Lösung 1: Automatische Installation (Empfohlen)
+```cmd
+# Verwende das erweiterte Setup
+setup_windows.ps1
+```
+oder
 ```cmd
 setup_fixed.bat
 ```
 
 ### 🚀 Lösung 2: Manuelle Installation
-```cmd
-# 1. PyTorch CPU-Version installieren
-pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+1. **Download**: https://aka.ms/vs/17/release/vc_redist.x64.exe (neueste Version)
+2. **Installieren**: Datei als Administrator ausführen
+3. **Neustart**: Computer neustarten (empfohlen)
+4. **Setup wiederholen**: `python test_hardware.py`
 
-# 2. Andere Pakete installieren
+### 🚀 Lösung 3: Alternative VC++ Versionen
+Falls die neueste Version nicht funktioniert:
+- **Visual Studio 2019**: https://aka.ms/vs/16/release/vc_redist.x64.exe
+- **Visual Studio 2015-2022**: https://learn.microsoft.com/cpp/windows/latest-supported-vc-redist
+
+---
+
+## ❌ Problem: PyTorch Version Conflicts
+
+**Fehlermeldung:** "torch 2.0.1 keine version satisfied"
+
+### 🚀 Lösung 1: CPU-optimierte Installation
+```cmd
+pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
 pip install opencv-python ultralytics pygame numpy pandas
+```
+
+### 🚀 Lösung 2: Neueste Versionen automatisch
+```cmd
+pip install torch torchvision opencv-python ultralytics pygame numpy pandas --upgrade
 ```
 
 ### 🚀 Lösung 3: Leichte Installation
@@ -23,12 +51,7 @@ pip install opencv-python ultralytics pygame numpy pandas
 pip install -r requirements-light.txt
 ```
 
-### 🚀 Lösung 4: Neueste Versionen (automatisch)
-```cmd
-pip install torch torchvision opencv-python ultralytics pygame numpy pandas --upgrade
-```
-
-## Häufige Probleme
+---
 
 ### "No module named 'torch'"
 ```cmd

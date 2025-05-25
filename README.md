@@ -60,8 +60,14 @@ Das **Bird Deterrent System** überwacht deine Terrasse kontinuierlich mit einer
 git clone https://github.com/erneu/bird-deterrent-system.git
 cd bird-deterrent-system
 
-# Windows
-setup.bat
+# Windows (empfohlen - mit Visual C++ Support)
+setup_windows.ps1
+
+# Windows (alternative)
+setup_fixed.bat
+
+# Nur Visual C++ Problem beheben
+fix_visual_cpp.bat
 
 # Linux
 chmod +x setup.sh && ./setup.sh
