@@ -1,0 +1,23 @@
+{
+    "model_size": "yolov5s",
+    "camera_id": 0,
+    "frame_width": 640,
+    "frame_height": 480,
+    "confidence_threshold": 0.5,
+    "pigeon_confidence_threshold": 0.4,
+    "pigeon_only_mode": true,
+    "size_filter": {
+        "min_relative_size": 0.005,
+        "max_relative_size": 0.2,
+        "min_aspect_ratio": 0.5,
+        "max_aspect_ratio": 2.0
+    },
+    "detection_cooldown": 5,
+    "deterrent_sound": "sounds/bird_deterrent.wav",
+    "active_hours": {
+        "start": 6,
+        "end": 22
+    },
+    "log_level": "INFO",
+    "show_preview": false
+}
