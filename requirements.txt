@@ -1,8 +1,20 @@
-opencv-python==4.8.1.78
-torch==2.0.1
-torchvision==0.15.2
-ultralytics==8.0.196
-pygame==2.5.2
-numpy==1.24.3
-pandas==2.0.3
-Pillow==10.0.0
+# Core Computer Vision
+opencv-python>=4.8.0
+numpy>=1.24.0
+
+# PyTorch (latest stable versions)
+torch>=2.1.0
+torchvision>=0.16.0
+
+# YOLO Object Detection
+ultralytics>=8.0.0
+
+# Audio
+pygame>=2.5.0
+
+# Data Processing
+pandas>=2.0.0
+Pillow>=10.0.0
+
+# Optional: Faster installation with pre-built wheels
+--extra-index-url https://download.pytorch.org/whl/cpu

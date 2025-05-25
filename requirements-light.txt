@@ -1,0 +1,17 @@
+# Minimale Installation - nur die wichtigsten Pakete
+# Verwende: pip install -r requirements-light.txt
+
+# PyTorch CPU (kleinere Download-Größe)
+torch --index-url https://download.pytorch.org/whl/cpu
+torchvision --index-url https://download.pytorch.org/whl/cpu
+
+# Computer Vision
+opencv-python
+ultralytics
+
+# Audio
+pygame
+
+# Basis-Pakete
+numpy
+pandas
