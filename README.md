@@ -1,4 +1,4 @@
-# 🐦 Bird Deterrent System
+# 🐦 Bird Deterrent System (Taubenabwehrsystem)
 
 **Intelligentes KI-basiertes Tauben-Abschreckungssystem für Terrassen und Balkone**
 
